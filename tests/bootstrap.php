@@ -32,7 +32,7 @@ $Tmp->create(LOGS, 0770);
 // Ensure default test connection is defined
 if (!getenv('db_class')) {
 	putenv('DB_CLASS=Cake\Database\Driver\Sqlite');
-	putenv('DB_DSN=sqlite::memory:');
+	putenv('DB_DSN=sqlite:///:memory:');
 }
 
 Router::defaultRouteClass(DashedRoute::class);
